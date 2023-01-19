@@ -236,6 +236,7 @@ public abstract class AbstractTypeScriptClientCodegen extends DefaultCodegen imp
         } else if (p instanceof MapProperty) {
             MapProperty mp = (MapProperty) p;
             Property inner = mp.getAdditionalProperties();
+            // THIS IS WHERE I WOULD EDIT TO TITLE...
             return "{ [key: string]: "+ getTypeDeclaration(inner) + "; }";
         } else if (p instanceof FileProperty) {
             return "any";
@@ -255,7 +256,8 @@ public abstract class AbstractTypeScriptClientCodegen extends DefaultCodegen imp
         } else if (p instanceof MapProperty) {
             MapProperty mp = (MapProperty) p;
             inner = mp.getAdditionalProperties();
-            return "{ [key: string]: " + this.getParameterDataType(parameter, inner) + "; }";
+            // THIS IS WHERE I WOULD EDIT TO TITLE...
+            return "{ [key: string]: " + this.getParameterDataType(parameter, inner) + "; }"; 
         } else if (p instanceof StringProperty) {
             // Handle string enums
             StringProperty sp = (StringProperty) p;
